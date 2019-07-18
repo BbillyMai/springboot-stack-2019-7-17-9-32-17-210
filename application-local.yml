@@ -1,7 +1,7 @@
 ---
 # Form running gradle locally
 server:
-  port: 8090
+  port: 8585
 spring:
   profiles:
     active: local
