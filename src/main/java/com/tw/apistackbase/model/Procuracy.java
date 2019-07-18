@@ -48,11 +48,11 @@ public class Procuracy {
         this.cases = cases;
     }
 
-//    public List<Procurator> getProcurators() {
-//        return procurators;
-//    }
-//
-//    public void setProcurators(List<Procurator> procurators) {
-//        this.procurators = procurators;
-//    }
+    public List<Procurator> getProcurators() {
+        return procurators;
+    }
+
+    public void setProcurators(List<Procurator> procurators) {
+        this.procurators = procurators;
+    }
 }
