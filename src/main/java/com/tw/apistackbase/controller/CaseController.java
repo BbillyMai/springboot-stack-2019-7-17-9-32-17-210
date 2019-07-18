@@ -36,7 +36,7 @@ public class CaseController {
 
     @GetMapping(value = "/kases", params = "name")
     public List<Kase> findByName(String name){
-        return caseRepository.findByName(name);
+        return caseRepository.findKasesByNameContains(name);
     }
 
     @DeleteMapping("/kases/{kaseId}")

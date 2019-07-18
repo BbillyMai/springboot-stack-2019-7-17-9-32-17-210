@@ -3,7 +3,6 @@ package com.tw.apistackbase.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "case")
@@ -17,14 +16,14 @@ public class Kase {
 
     private long time;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "case_info_id")
     private CaseInfo caseInfo;
-//
-//    @ManyToOne
-//    //@NotNull
-//    @JoinColumn(name="procuracy_id")
-//    private Procuracy procuracy;
+
+    @ManyToOne
+    //@NotNull
+    @JoinColumn(name = "procuracy_id")
+    private Procuracy procuracy;
 
 
     public int getId() {
@@ -59,11 +58,11 @@ public class Kase {
         this.caseInfo = caseInfo;
     }
 
-//    public Procuracy getProcuracy() {
-//        return procuracy;
-//    }
-//
-//    public void setProcuracy(Procuracy procuracy) {
-//        this.procuracy = procuracy;
-//    }
+    public Procuracy getProcuracy() {
+        return procuracy;
+    }
+
+    public void setProcuracy(Procuracy procuracy) {
+        this.procuracy = procuracy;
+    }
 }
